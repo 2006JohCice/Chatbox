@@ -1,0 +1,157 @@
+
+/* MAIN */
+.login-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* LEFT */
+.login-left {
+    width: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* HEADER */
+.login-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.icon-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-logo_login {
+    width: 100px;
+}
+
+.logo-text {
+    font-size: 40px;
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+.subtitle {
+    margin-top: 10px;
+    color: #8a8f99;
+    font-size: 14px;
+}
+
+/* FORM */
+.login-form {
+    margin-top: 20px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 6px;
+    border: 1px solid #dcdfe6;
+    font-size: 14px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #0d6efd;
+}
+
+/* BUTTON */
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background: #0d6efd;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #0b5ed7;
+}
+
+/* FOOTER */
+.login-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.forgot-password {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.error-alert {
+    color: red;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+/* RIGHT */
+.login-right {
+    width: 50%;
+    background: linear-gradient(135deg, #0d6efd, #a5cdf4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.right-content {
+    text-align: center;
+    max-width: 500px;
+}
+
+.right-logo {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.mockup-area img {
+    width: 100%;
+    max-width: 380px;
+    margin: 30px 0;
+}
+
+.right-content h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.right-content p {
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .login-right {
+        display: none;
+    }
+
+    .login-left {
+        width: 100%;
+        padding: 20px;
+    }
+}
