@@ -1,26 +1,43 @@
 const express = require('express');
+const route = require('./router/user/index.router')
+const cors = require('cors');
+const cookieParser = require('cookie-parser');
 const { createServer } = require('node:http');
 const { Server } = require('socket.io');
+require('dotenv').config()
+
+const database = require("./config/db.js")
+database.connect()
 const app = express();
+const port = process.env.PORT || 5000;
+
+
+//Socket IO
 const server = createServer(app);
-
-const io = new Server(server);
-
-
-app.get('/', (req, res) => {
-   res.sendFile(__dirname + '/index.html');
+const io = new Server(server, {
+  cors: {
+    origin: "http://localhost:3000"
+  }
 });
 
-io.on('connection', (socket) => {
-  console.log('a user connected');
+require('./sockets/socket.js')(io);
 
-  socket.emit('SERVER_SEND_SOCKET_ID', socket.id);
+// app.use(cors({ origin: "http://localhost:3000" }));
 
-  socket.on('CLIENT_SEND_MESAGE', (data) => {
-     io.emit('SERVER_RETURN_MESSAGE', data);
-  });
+
+
+// app.use(cors());
+app.use(express.json());
+app.use(cookieParser());
+
+
+// Route
+route(app)
+
+
+
+server.listen(port, () => {
+  console.log(`server running at http://localhost:${port}`);
 });
 
-server.listen(3000, () => {
-  console.log('server running at http://localhost:3000');
-});
+

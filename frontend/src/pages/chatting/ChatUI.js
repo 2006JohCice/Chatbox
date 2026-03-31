@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../../css/chatting/chatting.css"
+import { socket } from "../../socket/socket";
 function ChatUI() {
     const [messages, setMessages] = useState([
         { id: 1, from: "them", text: "Chào bạn! Tôi có thể giúp gì cho bạn hôm nay?", time: "09:30" },
@@ -17,6 +18,7 @@ function ChatUI() {
     function sendMessage() {
         const text = input.trim();
         if (!text) return;
+        socket.emit('CLIENT_SEND_MESAGE', text );
         const newMsg = {
             id: Date.now(),
             from: "me",
