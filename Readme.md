@@ -1,3 +1,4 @@
+```bash
 Luồng 
 backend/
 │
@@ -62,6 +63,7 @@ frontend/
 │   │   └── useSocket.js
 │   │
 │   ├── context/           # global state
+```
 │   │   └── ChatContext.js
 │   │
 │   ├── App.js
