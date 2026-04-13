@@ -6,7 +6,7 @@ backend/
 │   ├── config/            # cấu hình
 │   │   └── db.js
 │   │
-│   ├── controllers/       # xử lý logic
+│   ├── controllers/*       # xử lý logic
 │   │   ├── authController.js
 │   │   └── messageController.js
 │   │
@@ -14,7 +14,7 @@ backend/
 │   │   ├── User.js
 │   │   └── Message.js
 │   │
-│   ├── router/            # API routes
+│   ├── router/*           # API routes
 │   │   ├── authRoutes.js
 │   │   └── messageRoutes.js
 │   │
@@ -28,7 +28,7 @@ backend/
 │   │   └── generateToken.js
 │   │
 │   ├── app.js             # config express
-│   └── server.js          # chạy server
+│   └── index.js          # chạy server
 │
 ├── package.json
 └── .env
@@ -36,11 +36,11 @@ backend/
 
 frontend/
 │
-├── public/
+├── public/*
 │   └── index.html
 │
 ├── src/
-│   ├── assets/            # ảnh, icon
+│   ├── css/            # css
 │   │
 │   ├── components/        # component nhỏ
 │   │   ├── ChatBox.jsx
@@ -59,11 +59,10 @@ frontend/
 │   ├── services/          # gọi API
 │   │   └── api.js
 │   │
-│   ├── hooks/             # custom hooks
+│   ├── hooks/             # custom hooks not 
 │   │   └── useSocket.js
 │   │
-│   ├── context/           # global state
-```
+│   ├── context/           # global state not
 │   │   └── ChatContext.js
 │   │
 │   ├── App.js
@@ -71,4 +70,5 @@ frontend/
 │   └── App.css
 │
 ├── package.json
-└── .gitignore
+└── .gitignore 
+```
